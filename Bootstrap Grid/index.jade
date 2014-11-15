@@ -1,0 +1,70 @@
+doctype html
+html(lang="en")
+  head
+    title Jade Intro
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css")
+    link(rel="stylesheet", href="css/styles.css")
+    include includes/mixins
+    
+  body    
+    .container
+      .row
+        .col-md-4
+          h1 SiteName
+          
+        ul.col-sm-8.list-inline.text-right(style="margin-top:20px")
+          li
+            a(href=""): .glyphicon.glyphicon-envelope  Newsletter
+          li  
+            a(her=""): .glyphicon.glyphicon-leaf  RSS
+          li |
+          li  
+            form.form-inline(role="form")
+              .form-group
+                label.sr-only Email Address
+                input.form-control(type="email", placeholder="Enter Email")
+                button.btn.btn-default(type="submit") Sign Up!
+      
+      nav.row
+        .col-sm-12
+        ul.nav.nav-tabs(style="background: #eee; padding: 20px 10px 0; border-radius: 5px 5px 0 0")
+          li.active: a(href="") Books  
+          li: a(href="") Magazines
+          li: a(href="") Comics
+          li: a(href="") Audio Books
+          li: a(href="") Action Figures
+          li: a(href="") Costumes
+      
+      
+      
+      .row(style="padding-top: 10px")
+      
+        .col-sm-5
+          include includes/col-main
+          
+        .col-sm-4.col-secondary
+          include includes/col-secondary
+
+        .col-sm-3
+          include includes/col-tertiary
+      
+      .row.footer
+        .col-sm-12
+          hr(style="border-top-width: 10px")
+        
+        +footerunit
+        +footerunit
+        +footerunit
+        +footerunit
+        +footerunit
+        +footerunit
+      
+      .row
+        .col-sm-12.text-right.text-muted(style="padding: 20px 0 40px")
+          CopeyRight your Momm 2007, Dios Mio!
+        
+        
+        
+        
