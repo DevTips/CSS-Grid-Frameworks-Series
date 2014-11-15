@@ -5,4 +5,4 @@ A single layout re-created using different grid frameworks, video recorded and p
 
 ### The Layout Created
 
-![wireframe.jpg]()
+![](wireframe.jpg)
