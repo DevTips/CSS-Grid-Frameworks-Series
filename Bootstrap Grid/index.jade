@@ -1,20 +1,8 @@
-//- variables
-- var itmes_var = ['Magazines','Comics','Audio Books','Action Figures','Costumes']
-//- new site object to hold some data for easier manipulation
-- var site = {}
--     site.title = 'Jade Intro'
--     site.name = 'SiteName'
--     site.news = 'Newsletter'
--     site.rss = 'RSS'
--     site.email = 'Email Address'
--     site.copy = 'your Momm 2007, Dios Mio!'
-
-
+include includes/__config.jade
 doctype html
 html(lang="en")
-
-  include includes/_head-meta
-  body
+include includes/_head-meta
+body
     .container
       .row
         .col-md-4
@@ -22,14 +10,14 @@ html(lang="en")
 
         ul.col-sm-8.list-inline.text-right(style="margin-top:20px")
           li
-            a(href=""): .glyphicon.glyphicon-envelope= site.news
+            a(href=""): .glyphicon.glyphicon-envelope #{site.news}
           li
-            a(herf=""): .glyphicon.glyphicon-leaf= site.rss
+            a(herf=""): .glyphicon.glyphicon-leaf #{site.rss}
           li |
           li
             form.form-inline(role="form")
               .form-group
-                label.sr-only= site.email
+                label.sr-only #{site.email}
                 input.form-control(type="email", placeholder="Enter Email")
                 button.btn.btn-default(type="submit") Sign Up!
 
@@ -72,8 +60,4 @@ html(lang="en")
 
       .row
         .col-sm-12.text-right.text-muted(style="padding: 20px 0 40px")
-          CopeyRight= site.copy
-
-
-
-
+          CopyRight #{site.copy}
